@@ -1,18 +1,9 @@
-name: "Podcast Generator"
-author: "Casandra"
-description: "Generates a feed for podcast from YAML file"
-runs:
-  using: "docker"
-  image: "Dockerfile"
-branding:
-  icon: "git-branch"
-  color: "red"
+name: Podcast Generator
+description: Generate podcast feeds
 inputs:
   email:
-    description: The commiter's email address
+    description: 'Git user email'
     required: true
-    default: ${{ github.actor }}@localhost
-  name:
-    description: The commiter's name
-    required: true
-    default: ${{ github.actor }}
+runs:
+  using: docker
+  image: Dockerfile
